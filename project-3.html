@@ -1,200 +1,220 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-  <title>Case Study of When we</title>
-  <meta name="description" content="Case study page of Project" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" href="https://i.postimg.cc/W4ssc5bY/profile-pic-8.jpg" type="image/x-icon" />
+    <title>Case Study: WhenWe App | Arham Mahmood Abbasi</title>
+    <meta name="description"
+        content="Case study of the WhenWe app, detailing performance optimization, complex UI/UX, and AI/chatbot development." />
+    <meta name="author" content="Arham Mahmood Abbasi" />
 
-  <link href='https://d33wubrfki0l68.cloudfront.net/css/b14c4959d2141192dcad9a56bef700e9b47ebb62/css/style.css' rel='stylesheet'/>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
-    rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <style>
-      .image-container {
-        width: 100%; /* Container takes full width of its parent */
-        max-width: 400px; /* Set a max width for the container */
-        margin: 0 auto; /* Center the container */
-        padding: 10px; /* Optional: Add some padding around the image */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for a better visual effect */
-      }
-      
-      .mobile-screen-image {
-        width: 100%; 
-        height: auto;
-        border-radius: 10px;
-      }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
 
+        /* Custom scrollbar for a sleek look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1a202c; /* Dark grey for track */
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #6b7280; /* Medium grey for thumb */
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9ca3af; /* Lighter grey on hover */
+        }
+
+        /* Mobile menu toggle animation */
+        #menu-toggle:checked + div #menu {
+            display: block;
+        }
+
+        #menu-toggle:checked + div .menu-icon-open {
+            display: none;
+        }
+
+        #menu-toggle:checked + div .menu-icon-close {
+            display: block;
+        }
+
+        .image-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .mobile-screen-image {
+            width: 100%; 
+            height: auto;
+            border-radius: 10px;
+        }
     </style>
-    
 </head>
 
-<body>
-  <header class="header">
-    <div class="header__content">
-      <div class="header__logo-container">
-        <div class="header__logo-img-cont">
-          <img src="https://i.postimg.cc/W4ssc5bY/profile-pic-8.jpg" alt="Arham Mahmood Abbasi Logo Image"
-            class="header__logo-img" />
-        </div>
-        <span class="header__logo-sub">Arham Mahmood Abbasi</span>
-      </div>
-      <div class="header__main">
-        <ul class="header__links">
-          <li class="header__link-wrapper">
-            <a class='header__link' href='/'> Home </a>
-          </li>
-          <li class="header__link-wrapper">
-            <a class='header__link' href='/#about'>About </a>
-          </li>
-          <li class="header__link-wrapper">
-            <a class='header__link' href='/#projects'>
-              Projects
-            </a>
-          </li>
-          <li class="header__link-wrapper">
-            <a class='header__link' href='/#contact'> Contact </a>
-          </li>
-        </ul>
-        <div class="header__main-ham-menu-cont">
-          <img src="https://d33wubrfki0l68.cloudfront.net/79e75114856ae61628d2ad26504e3ff4ab2c71b6/f06a4/assets/svg/ham-menu.svg" alt="hamburger menu" class="header__main-ham-menu" />
-          <img src="https://d33wubrfki0l68.cloudfront.net/de2a681c8ca1630b29949b3a34bf158a686a0554/6a0ec/assets/svg/ham-menu-close.svg" alt="hamburger menu close"
-            class="header__main-ham-menu-close d-none" />
-        </div>
-      </div>
-    </div>
-    <div class="header__sm-menu">
-      <div class="header__sm-menu-content">
-        <ul class="header__sm-menu-links">
-          <li class="header__sm-menu-link">
-            <a href='/'> Home </a>
-          </li>
-
-          <li class="header__sm-menu-link">
-            <a href='/#about'> About </a>
-          </li>
-
-          <li class="header__sm-menu-link">
-            <a href='/#projects'> Projects </a>
-          </li>
-
-          <li class="header__sm-menu-link">
-            <a href='/#contact'> Contact </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </header>
-  <section class="project-cs-hero">
-    <div class="project-cs-hero__content">
-      <h1 class="heading-primary">When We</h1>
-      <div class="project-cs-hero__info">
-        <p class="text-primary">
-          This page contains the case study of When We App which
-          includes the Project Overview and Tools Used.
-        </p>
-      </div>
-      <!-- <div class="project-cs-hero__cta">
-        <a rel="noreferrer">Live Link</a>
-      </div> -->
-    </div>
-  </section>
-  <section class="project-details">
-    <div class="main-container">
-      <div class="project-details__content">
-        <div class="project-details__showcase-img-cont image-container">
-          <img src="./whenwe.png" alt="Project Image" class="mobile-screen-image" />
-        </div>
-        <div class="project-details__content-main">
-          <div class="project-details__desc">
-            <h2 class="project-details__content-title">Project Overview</h2>
-            <p class="project-details__desc-para">
-             When we is an online platform that invites people to contribute to a memory book about a person in yours, and their lives. These invitations may be to someone who has shared a lot, or a little amount of time in the recipient’s life, but is still important to them.
-            </p>
-            <p class="project-details__desc-para">
-              I Designed and developed a robust full-stack web application, implementing a comprehensive backend API, PDF generation, email automation, front-end integration, security features, and performance optimizations. The project showcases expertise in modern web development technologies and best practices.
-            </p>
-          </div>
-          <div class="project-details__tools-used">
-            <h2 class="project-details__content-title">Tools Used</h2>
-            <div class="skills">
-              <div class="skills__skill">SVELTE KIT</div>
-              <div class="skills__skill">PUPPETIER</div>
-              <div class="skills__skill">TS</div>
-              <div class="skills__skill">GPT AGENTS</div>
-              <div class="skills__skill">GIT</div>
-              <div class="skills__skill">Github</div>
-              <div class="skills__skill">Python</div>
-              <div class="skills__skill">Django</div>
-              <div class="skills__skill">Docker</div>
-              <div class="skills__skill">SQL</div>
-              <div class="skills__skill">TAILWIND</div>
+<body class="bg-gray-900 text-gray-100 dark:bg-white dark:text-gray-800 antialiased">
+    <header class="bg-gray-800 dark:bg-gray-100 shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex flex-wrap items-center justify-between">
+            <div class="flex items-center">
+                <img class="w-12 h-12 rounded-full mr-3" src="https://i.postimg.cc/W4ssc5bY/profile-pic-8.jpg"
+                    alt="Arham Mahmood Abbasi Profile Picture" />
+                <span class="text-xl font-bold text-white dark:text-gray-900">Arham Mahmood Abbasi</span>
             </div>
-          </div>
-         
-          <div class="project-details__links">
-            <h2 class="project-details__content-title">See Live</h2>
-            <a href="https://whenwe.ilixir.com.au/" class="btn btn--med btn--theme project-details__links-btn"
-              target="_blank" rel="noreferrer">Live Link</a>
-            <a href="https://arham-mahmood-abbasi.github.io/protfolio" class="btn btn--med btn--theme-inv project-details__links-btn">Go Back</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <footer class="main-footer">
-    <div class="main-container">
-        <div class="main-footer__upper">
-            <div class="main-footer__row main-footer__row-1">
-                <h2 class="heading heading-sm main-footer__heading-sm">
-                    <span>Social</span>
-                </h2>
-                <div class="main-footer__social-cont">
-                    <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/arham-mahmood-abbasi-2b0ab2243/?originalSubdomain=pk">
-          <img class="main-footer__icon" src="https://d33wubrfki0l68.cloudfront.net/7f29579dde49e02480372aa49f7189c5536b0118/34b92/assets/png/linkedin-ico.png"
-            alt="Arham Mahmood Abbasi Linkedin Profile" />
-        </a>
-                    <a target="_blank" rel="noreferrer" href="https://github.com/arham-mahmood-abbasi">
-          <img class="main-footer__icon" src="https://d33wubrfki0l68.cloudfront.net/5557d5a11584d7201a38ee1a95200f57a4cc0f88/15085/assets/png/github-ico.png" alt="AllSpicetech Github Profile" />
-        </a>
-                    <a target="_blank" rel="noreferrer" href="https://twitter.com/arhamabbasi">
-          <img class="main-footer__icon" src="https://d33wubrfki0l68.cloudfront.net/ef67339f7016cb09ba66366c1dc9145ac69f2a21/feca1/assets/png/twitter-ico.png" alt="AllSpicetech Twitter Profile" />
-        </a>
 
-                    <a target="_blank" rel="noreferrer" href="https://dev.to/arhamabbasi">
-          <img class="main-footer__icon" src="https://d33wubrfki0l68.cloudfront.net/c7b1e51b8c75a239d68af3d42866666580f390ec/dcc7c/assets/png/blog-ico.png" alt="AllSpicetech DEV.to Blog Profile" />
-        </a>
-                    <a target="_blank" rel="noreferrer" href="https://www.youtube.com/@codingwitharham2051">
-          <img class="main-footer__icon main-footer__icon--mr-none" src="https://d33wubrfki0l68.cloudfront.net/493f1aa6da674c05bc606ba5b9e8092b881e8626/67c76/assets/png/yt-ico.png"
-            alt="AllSpicetech Youtube Channel" />
-        </a>
+            <input class="hidden" type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" class="cursor-pointer md:hidden block text-gray-200 dark:text-gray-700">
+                <svg class="h-6 w-6 menu-icon-open" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg class="h-6 w-6 menu-icon-close hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </label>
+
+            <div class="hidden md:flex md:items-center md:w-auto w-full" id="menu">
+                <ul class="flex flex-col md:flex-row items-center justify-between text-base text-gray-300 dark:text-gray-700 pt-4 md:pt-0">
+                    <li><a class="md:p-4 py-2 block hover:text-gray-50 dark:hover:text-gray-900 transition duration-300" href="/">Home</a></li>
+                    <li><a class="md:p-4 py-2 block hover:text-gray-50 dark:hover:text-gray-900 transition duration-300" href="/#about">About Me</a></li>
+                    <li><a class="md:p-4 py-2 block hover:text-gray-50 dark:hover:text-gray-900 transition duration-300" href="/#experience">Experience</a></li>
+                    <li><a class="md:p-4 py-2 block text-rose-500 font-semibold hover:text-rose-400 dark:hover:text-rose-600 transition duration-300" href="/#projects">Projects</a></li>
+                    <li><a class="md:p-4 py-2 block hover:text-gray-50 dark:hover:text-gray-900 transition duration-300" href="/#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="py-20 bg-gray-900 dark:bg-white text-center">
+        <div class="container mx-auto px-4">
+            <h1 class="text-5xl font-extrabold text-white dark:text-gray-900 mb-4">WhenWe App</h1>
+            <p class="text-lg text-gray-300 dark:text-gray-700 max-w-2xl mx-auto">
+                This page details the case study of the WhenWe app, highlighting its performance optimizations, complex UI/UX, and AI/chatbot development.
+            </p>
+            <div class="mt-8">
+                <a href="https://whenwe.ilixir.com.au/" target="_blank" rel="noreferrer"
+                    class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-rose-600 hover:bg-rose-700 transition duration-300">
+                    View Live Project
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-800 dark:bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2 flex justify-center items-start">
+                    <div class="image-container bg-gray-700 dark:bg-gray-200 rounded-lg">
+                        <img src="./whenwe.png" alt="WhenWe App Screenshot"
+                            class="mobile-screen-image object-contain" />
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2 flex flex-col justify-center">
+                    <div class="mb-10">
+                        <h2 class="text-4xl font-bold text-white dark:text-gray-900 mb-6">Project Overview</h2>
+                        <p class="text-lg text-gray-300 dark:text-gray-700 leading-relaxed mb-4">
+                            WhenWe is an online platform that invites people to contribute to a memory book about a person in theirs, and their lives. These invitations may be to someone who has shared a lot, or a little amount of time in the recipient’s life, but is still important to them. 
+                        </p>
+                        <p class="text-lg text-gray-300 dark:text-gray-700 leading-relaxed mb-4">
+                            As Senior Developer and Performance Optimization Lead for the WhenWe project, my primary focus was on drastically improving application performance and user experience. 
+                        </p>
+                        <p class="text-lg text-gray-300 dark:text-gray-700 leading-relaxed mb-4">
+                            One of my most impactful contributions was reducing the web application's render time from an unacceptable 1 minute to a mere 2 seconds. I achieved this through meticulous profiling and analysis, leveraging SvelteKit with server-side rendering (SSR) to send fully formed HTML to the client for dramatically improved perceived load times and SEO. Beyond SSR, I fine-tuned PostgreSQL queries by rewriting inefficient ones, adding strategic indexes, optimizing joins, and ensuring lean, fast database interactions. This achievement was pivotal in improving user satisfaction and overall application usability. 
+                        </p>
+                        <p class="text-lg text-gray-300 dark:text-gray-700 leading-relaxed mb-4">
+                            My work also involved tackling highly complex UI/UX challenges, particularly designing intricate PDF styling for "Memory Books." This demanded pixel-perfect precision to ensure exact replication across various devices and print formats, involving custom CSS and specialized PDF generation. Beyond visual design, I integrated MongoDB for advanced analytics, chosen for its flexibility and scalability to process large volumes of unstructured analytical data efficiently. I designed data models to capture user interactions and performance metrics. Furthermore, I significantly optimized front-end performance beyond just render time, implementing lazy loading, code splitting, and optimizing asset delivery to contribute to a snappier, more fluid user interface. 
+                        </p>
+                        <p class="text-lg text-gray-300 dark:text-gray-700 leading-relaxed mb-4">
+                            A fascinating aspect of my role was contributing to the development of a Django-powered chatbot. I was involved in building several versions, focusing on enhancing user interaction and providing more intelligent support. This included working on backend logic to process natural language input, integrate with various data sources, and generate relevant responses, exploring different approaches to conversational flow and intent recognition. 
+                        </p>
+                        <p class="text-lg text-gray-300 dark:text-gray-700 leading-relaxed">
+                            The WhenWe project was a significant growth experience in terms of technical adaptability. The transition to SvelteKit and server-side rendering was entirely new territory for me, yet I rapidly assimilated these complex technologies through dedicated self-study and team guidance. Successfully implementing SvelteKit's SSR capabilities and integrating it seamlessly into the existing Django backend showcased my ability to quickly master novel frameworks and apply them effectively to solve real-world performance challenges. 
+                        </p>
+                    </div>
+
+                    <div class="mb-10">
+                        <h2 class="text-4xl font-bold text-white dark:text-gray-900 mb-6">Tools Used</h2>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">SvelteKit</span>
+                            <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">Puppeteer</span>
+                            <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">TypeScript</span>
+                            <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">GPT Agents</span>
+                            <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">GIT</span>
+                            <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">GitHub</span>
+                            <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">Python</span>
+                            <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">Django</span>
+                            <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">Docker</span>
+                            <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">SQL</span>
+                            <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">Tailwind CSS</span>
+                            <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">PostgreSQL</span>
+                            <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">MongoDB</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <a href="https://whenwe.ilixir.com.au/" target="_blank" rel="noreferrer"
+                            class="inline-flex items-center justify-center px-8 py-3 mr-4 border border-transparent text-base font-medium rounded-md text-white bg-rose-600 hover:bg-rose-700 transition duration-300">
+                            Live Link
+                        </a>
+                        <a href="/"
+                            class="inline-flex items-center justify-center px-8 py-3 border border-rose-600 text-base font-medium rounded-md text-rose-600 bg-transparent hover:bg-rose-600 hover:text-white transition duration-300">
+                            Go Back to Projects
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="main-footer__row main-footer__row-2">
-                <h2 class="heading heading-sm text-lt">Arham Mahmood Abbasi</h2>
-                <p class="main-footer__short-desc">
-                    A Senior Software Engineer constructing both the frontend and backend of websites and web applications, contributing to the overall success of the product.
-                </p>
-            </div>
         </div>
+    </section>
 
-        <!-- If you give me some credit or shoutout here by linking to my website, then it will be a big thing for me and will help me a lot :) -->
-        <div class="main-footer__lower">
-            &copy; Copyright
-            <script>
-                document.write(new Date().getFullYear())
-            </script>. Made by
-            <a rel="noreferrer" target="_blank" href="https://arham-mahmood-abbasi.github.io/protfolio">Arham Mahmood Abbasi</a>
+    <footer class="bg-gray-900 dark:bg-gray-100 py-10">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-white dark:text-gray-900 mb-4">Arham Mahmood Abbasi</h2>
+            <p class="text-gray-400 dark:text-gray-600 max-w-xl mx-auto mb-8">
+                A Senior Software Engineer constructing both the frontend and backend of websites and web applications, contributing to the overall success of the product.
+            </p>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="https://www.linkedin.com/in/arham-mahmood-abbasi-2b0ab2243/?originalSubdomain=pk" target="_blank" rel="noreferrer"
+                    class="text-gray-400 hover:text-white dark:hover:text-gray-900 transition duration-300">
+                    <img class="w-8 h-8" src="https://d33wubrfki0l68.cloudfront.net/7f29579dde49e02480372aa49f7189c5536b0118/34b92/assets/png/linkedin-ico.png" alt="Linkedin" />
+                </a>
+                <a href="https://github.com/arham-mahmood-abbasi" target="_blank" rel="noreferrer"
+                    class="text-gray-400 hover:text-white dark:hover:text-gray-900 transition duration-300">
+                    <img class="w-8 h-8" src="https://d33wubrfki0l68.cloudfront.net/5557d5a11584d7201a38ee1a95200f57a4cc0f88/15085/assets/png/github-ico.png" alt="Github" />
+                </a>
+                <a href="https://twitter.com/arhamabbasi" target="_blank" rel="noreferrer"
+                    class="text-gray-400 hover:text-white dark:hover:text-gray-900 transition duration-300">
+                    <img class="w-8 h-8" src="https://d33wubrfki0l68.cloudfront.net/ef67339f7016cb09ba66366c1dc9145ac69f2a21/feca1/assets/png/twitter-ico.png" alt="Twitter" />
+                </a>
+                <a href="https://dev.to/arhamabbasi" target="_blank" rel="noreferrer"
+                    class="text-gray-400 hover:text-white dark:hover:text-gray-900 transition duration-300">
+                    <img class="w-8 h-8" src="https://d33wubrfki0l68.cloudfront.net/c7b1e51b8c75a239d68af3d42866666580f390ec/dcc7c/assets/png/blog-ico.png" alt="DEV.to Blog" />
+                </a>
+                <a href="https://www.youtube.com/@codingwitharham2051" target="_blank" rel="noreferrer"
+                    class="text-gray-400 hover:text-white dark:hover:text-gray-900 transition duration-300">
+                    <img class="w-8 h-8" src="https://d33wubrfki0l68.cloudfront.net/493f1aa6da674c05bc606ba5b9e8092b881e8626/67c76/assets/png/yt-ico.png" alt="Youtube" />
+                </a>
+            </div>
+            <p class="text-gray-500 text-sm">
+                © Copyright <script>document.write(new Date().getFullYear())</script>. Made by
+                <a rel="noreferrer" target="_blank" href="https://arham-mahmood-abbasi.github.io/protfolio"
+                    class="text-rose-500 hover:underline">Arham Mahmood Abbasi</a>
+            </p>
         </div>
-    </div>
-</footer>
+    </footer>
 </body>
 
 </html>

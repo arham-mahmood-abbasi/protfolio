@@ -1,53 +1,489 @@
-<div class="w-full h-full bg-gray-900 dark:bg-gray-200">
-    <header class="lg:px-16 px-4 flex flex-wrap items-center py-4 shadow-lg">
-        <div class="flex-1 flex justify-between items-center">
-            <img class="sm:w-[10rem] xs:w-[7rem]" src="https://techakim.com/sam/tg/7268/li/imgs/samlogo2.png" alt="Logo" />
-        </div>
-        <label for="menu-toggle" class="pointer-cursor md:hidden block">
-            <svg class="fill-current text-gray-200" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-            <title>menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-            </svg>
-            </label>
-        <input class="hidden" type="checkbox" id="menu-toggle" />
+<!DOCTYPE html>
+<html lang="en">
 
-        <div class="hidden md:flex md:items-center md:w-auto w-full" id="menu">
-            <nav>
-                <ul class="md:flex items-center justify-between text-base text-gray-100 dark:text-gray-600 pt-4 md:pt-0">
-                    <li><a class="md:p-4 py-3 px-0 block text-rose-500" href="#">Home</a></li>
-                    <li><a class="md:p-4 py-3 px-0 block" href="#">About Me</a></li>
-                    <li><a class="md:p-4 py-3 px-0 block" href="#">Education</a></li>
-                    <li><a class="md:p-4 py-3 px-0 block" href="#">Experience</a></li>
-                    <li><a class="md:p-4 py-3 px-0 block" href="#">Projects</a></li>
-                    <li><a class="md:p-4 py-3 px-0 block md:mb-0 mb-2" href="#">Contact</a></li>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" href="https://i.postimg.cc/W4ssc5bY/profile-pic-8.jpg" type="image/x-icon" />
+    <title>Arham Mahmood Abbasi | Senior Software Engineer</title>
+    <meta name="description"
+        content="Arham Mahmood Abbasi, a Senior Software Engineer with expertise in full-stack development, AI integration, and high-performance applications." />
+    <meta name="author" content="Arham Mahmood Abbasi" />
+    <meta name="google-site-verification" content="wX2xdkxqjrC4rA2EM-9bbaVpiEEFG8ae5azgeZDd-oo" />
+
+    <meta property="og:title" content="Arham Mahmood Abbasi | Senior Software Engineer" />
+    <meta property="og:site_name" content="Arham Mahmood Abbasi Portfolio" />
+    <meta property="og:url" content="https://arham-mahmood-abbasi.github.io/protfolio/" />
+    <meta property="og:description"
+        content="Arham Mahmood Abbasi, a Senior Software Engineer with expertise in full-stack development, AI integration, and high-performance applications." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://i.postimg.cc/W4ssc5bY/profile-pic-8.jpg" />
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QD9ESD1D9K"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-QD9ESD1D9K');
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Custom scrollbar for a sleek look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1a202c; /* Dark grey for track */
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #6b7280; /* Medium grey for thumb */
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9ca3af; /* Lighter grey on hover */
+        }
+
+        /* Mobile menu toggle animation */
+        #menu-toggle:checked + div #menu {
+            display: block;
+        }
+
+        #menu-toggle:checked + div .menu-icon-open {
+            display: none;
+        }
+
+        #menu-toggle:checked + div .menu-icon-close {
+            display: block;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-gray-100 dark:bg-white dark:text-gray-800 antialiased">
+    <header class="bg-gray-800 dark:bg-gray-100 shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex flex-wrap items-center justify-between">
+            <div class="flex items-center">
+                <img class="w-12 h-12 rounded-full mr-3" src="https://i.postimg.cc/W4ssc5bY/profile-pic-8.jpg"
+                    alt="Arham Mahmood Abbasi Profile Picture" />
+                <span class="text-xl font-bold text-white dark:text-gray-900">Arham Mahmood Abbasi</span>
+            </div>
+
+            <input class="hidden" type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" class="cursor-pointer md:hidden block text-gray-200 dark:text-gray-700">
+                <svg class="h-6 w-6 menu-icon-open" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg class="h-6 w-6 menu-icon-close hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </label>
+
+            <div class="hidden md:flex md:items-center md:w-auto w-full" id="menu">
+                <ul class="flex flex-col md:flex-row items-center justify-between text-base text-gray-300 dark:text-gray-700 pt-4 md:pt-0">
+                    <li><a class="md:p-4 py-2 block text-rose-500 font-semibold hover:text-rose-400 dark:hover:text-rose-600 transition duration-300" href="#">Home</a></li>
+                    <li><a class="md:p-4 py-2 block hover:text-gray-50 dark:hover:text-gray-900 transition duration-300" href="#about">About Me</a></li>
+                    <li><a class="md:p-4 py-2 block hover:text-gray-50 dark:hover:text-gray-900 transition duration-300" href="#experience">Experience</a></li>
+                    <li><a class="md:p-4 py-2 block hover:text-gray-50 dark:hover:text-gray-900 transition duration-300" href="#projects">Projects</a></li>
+                    <li><a class="md:p-4 py-2 block hover:text-gray-50 dark:hover:text-gray-900 transition duration-300" href="#contact">Contact</a></li>
                 </ul>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </header>
 
-    <div
-        class="h-screen w-full mx-auto py-20 xl:px-16 xs:px-8 flex md:flex-row xs:flex-col gap-4 justify-center items-center pb-10 pt-4">
-        <div class="w-full">
-            <img class="rounded-full md:max-w-[70%] sm:max-w-[50%] xs:max-w-[60%] mx-auto" src="https://techakim.com/sam/tg/7268/li/imgs/profile.jpg" alt="My Image" />
-        </div>
-        <div class="w-full flex flex-col justify-center gap-4 text-white dark:text-gray-800 md:mt-0 sm:mt-8 xs:mt-4">
-            <h1 class="text-4xl font-semibold font-serif">Hello, I'm Samuel Abera</h1>
-            <h3 class="capitalize text-rose-400">i'm <span class="typing text-green-500 dark:text-green-700">fullstack developer</span></h3>
-            <p>Experienced full-stack developer with 4+ years of expertise in Laravel, NestJS, Nuxt.js, Next.js,
-                Android, and some Flutter experience.</p>
-            <div class="sm:mt-4 xs:mt-2">
-                <button class="px-6 py-1 bg-rose-500 text-white rounded-sm">Get In Touch</button>
+    <section class="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800 dark:from-white dark:to-gray-100 text-center">
+        <div class="container mx-auto px-4 py-20 z-10">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-12">
+                <div class="w-full md:w-1/3 flex justify-center">
+                    <img class="rounded-full w-64 h-64 object-cover border-4 border-rose-500 shadow-lg transition-transform duration-500 hover:scale-105"
+                        src="https://i.postimg.cc/W4ssc5bY/profile-pic-8.jpg" alt="Arham Mahmood Abbasi Profile" />
+                </div>
+                <div class="w-full md:w-2/3 flex flex-col justify-center text-white dark:text-gray-800 text-center md:text-left">
+                    <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-4">
+                        Hey, I'm Arham Mahmood Abbasi
+                    </h1>
+                    <h3 class="text-3xl font-semibold text-rose-400 dark:text-rose-600 mb-6">
+                        I'm a <span class="typing text-green-400 dark:text-green-700 font-bold"></span>
+                    </h3>
+                    <p class="text-lg md:text-xl text-gray-300 dark:text-gray-700 leading-relaxed max-w-2xl md:mx-0 mx-auto">
+                        My career demonstrates robust technical leadership, comprehensive full-stack development expertise, and a consistent ability to deliver high-performance, scalable applications. I excel at rapidly acquiring and applying new technologies to solve complex challenges, as evidenced across pivotal projects.
+                    </p>
+                    <div class="mt-8 flex justify-center md:justify-start gap-4">
+                        <a href="#projects"
+                            class="px-8 py-3 bg-rose-600 text-white font-semibold rounded-lg shadow-lg hover:bg-rose-700 transition duration-300 transform hover:-translate-y-1">
+                            View My Projects
+                        </a>
+                        <a href="#contact"
+                            class="px-8 py-3 border border-rose-600 text-rose-600 font-semibold rounded-lg shadow-lg hover:bg-rose-600 hover:text-white transition duration-300 transform hover:-translate-y-1">
+                            Get In Touch
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 md:left-10 md:translate-x-0 flex flex-col items-center space-y-4 z-20">
+            <a href="https://www.linkedin.com/in/arham-mahmood-abbasi/" target="_blank" rel="noreferrer"
+                class="text-gray-400 hover:text-rose-500 transition-colors duration-300">
+                <img src="https://d33wubrfki0l68.cloudfront.net/d8e6e1e636531e28274a1b8b6d947b817f6145bd/d42d3/assets/svg/linkedin-dark.svg" alt="LinkedIn" class="w-7 h-7" />
+            </a>
+            <a href="https://github.com/arham-mahmood-abbasi" target="_blank" rel="noreferrer"
+                class="text-gray-400 hover:text-rose-500 transition-colors duration-300">
+                <img src="https://d33wubrfki0l68.cloudfront.net/38469cf88d038b6ba3322c9fcb93a8f7167df4b9/cb0b9/assets/svg/github-dark.svg" alt="GitHub" class="w-7 h-7" />
+            </a>
+            <a href="https://twitter.com/arhamabbasi" target="_blank" rel="noreferrer"
+                class="text-gray-400 hover:text-rose-500 transition-colors duration-300">
+                <img src="https://d33wubrfki0l68.cloudfront.net/ba3ef9fd9d500c55ba265adae6087ba71e05f5d9/d0067/assets/svg/twitter-dark.svg" alt="Twitter" class="w-7 h-7" />
+            </a>
+            <a href="https://dev.to/arhamabbasi" target="_blank" rel="noreferrer"
+                class="text-gray-400 hover:text-rose-500 transition-colors duration-300">
+                <img src="https://d33wubrfki0l68.cloudfront.net/e978c8491d93813aa00b3dc80b9abfb0d64a9086/3c187/assets/svg/book-dark.svg" alt="DEV.to Blog" class="w-7 h-7" />
+            </a>
+            <div class="w-px h-16 bg-gray-600 dark:bg-gray-300"></div>
+        </div>
+
+        <div class="absolute bottom-10 right-10 flex flex-col items-center animate-bounce z-20">
+            <a href="#about" class="text-gray-400 hover:text-rose-500 transition-colors duration-300">
+                <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-gray-800 dark:bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-extrabold text-center text-white dark:text-gray-900 mb-12">
+                About Me
+            </h2>
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <h3 class="text-3xl font-bold text-white dark:text-gray-900 mb-6">Get to know me!</h3>
+                    <div class="text-lg text-gray-300 dark:text-gray-700 space-y-6">
+                        <p>
+                            I’m a <strong class="text-rose-400 dark:text-rose-600">Senior Software Engineer</strong> with over 2 years of experience, building both the front-end and back-end of mobile and web applications that contribute to the overall success of the product.  You can check out some of my work in the
+                            <a href="#projects" class="text-rose-400 dark:text-rose-600 hover:underline">Projects</a> section.
+                        </p>
+                        <p>
+                            My career demonstrates robust technical leadership, comprehensive full-stack development expertise, and a consistent ability to deliver high-performance, scalable applications. I excel at rapidly acquiring and applying new technologies to solve complex challenges, as evidenced across pivotal projects at Ilixir, WhenWe, and my current role at AllSpiceTech. My commitment to innovation drives me to continually enhance system capabilities, from core architecture to advanced AI integration.
+                        </p>
+                        <p>
+                            I enjoy sharing content related to the knowledge I’ve gained over the years in Full Stack Development, aiming to assist others in the <strong class="text-rose-400 dark:text-rose-600">Dev Community</strong>. Feel free to connect or follow me on
+                            <a rel="noreferrer" href="https://linkedin.com/in/arham-mahmood-abbasi/" target="_blank" class="text-rose-400 dark:text-rose-600 hover:underline">Linkedin</a> where I post useful content related to Full Stack Development and Programming.
+                        </p>
+                        <p>
+                            I’m open to <strong class="text-rose-400 dark:text-rose-600">job</strong> opportunities where I can contribute, learn, and grow. If you have a suitable opportunity that aligns with my skills and experience, please don’t hesitate to
+                            <a href="#contact" class="text-rose-400 dark:text-rose-600 hover:underline">contact</a> me.
+                        </p>
+                    </div>
+                    <div class="mt-10">
+                        <a href="#contact"
+                            class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-rose-600 hover:bg-rose-700 transition duration-300 transform hover:-translate-y-1">
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <h3 class="text-3xl font-bold text-white dark:text-gray-900 mb-6">My Skills</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">C++</span> 
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">JS</span> 
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">TS</span> 
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">Python</span> 
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">SQL</span> 
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">JavaScript</span> 
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">Next.js</span> 
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">Express.js</span> 
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">Node.js</span> 
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">Jest</span> 
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">DRF</span> 
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">SvelteKit</span> 
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">.Net</span> 
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">Blazor</span>
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">Vue.js</span> 
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">Git</span> 
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">GitHub</span> 
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">VS Code</span> 
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">Visual Studio</span> 
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">Jira</span> 
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">Firebase</span> 
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">Microsoft Azure</span> 
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">MongoDB</span> 
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">Docker</span> 
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">React</span> 
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">Bootstrap</span> 
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">Tailwind CSS</span> 
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">Svelte</span> 
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">Echarts</span> 
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">Puppeteer</span> 
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">Gmaps</span> 
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">Selenium</span> 
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">Requests</span> 
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">RAG</span> 
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">GPT Agents</span>
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">System Design</span>
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">System Architecture</span>
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">System Automation</span>
+                        <span class="px-4 py-2 bg-gray-700 dark:bg-gray-200 text-gray-200 dark:text-gray-800 rounded-full text-sm font-medium">Data Scrapping</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-20 bg-gray-900 dark:bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-extrabold text-center text-white dark:text-gray-900 mb-12">
+                Experience
+            </h2>
+
+            <div class="space-y-12">
+               <div class="bg-gray-800 dark:bg-gray-100 rounded-lg shadow-xl p-8 transition-transform transform hover:scale-[1.02] duration-300">
+    <h3 class="text-3xl font-bold text-rose-500 mb-2">Senior Software Engineer, AllSpiceTech (now Ilixir) - QLD, Australia</h3>
+    <p class="text-lg text-gray-300 dark:text-gray-700 mb-6">Nov 2021 - Present</p>
+    <ul class="list-disc list-inside space-y-3 text-lg text-gray-300 dark:text-gray-700">
+        <li>Deeply involved in developing their cutting-edge AI-powered design validation platform, revolutionizing hardware engineering by streamlining collaboration and catching errors early.</li>
+        <li>Designed and implemented critical backend services and APIs, primarily using Python and Django, powering the platform's ability to manage hardware revision control (powered by Git for hardware), facilitate collaborative workflows, and automate tedious engineering tasks.</li>
+        <li>Instrumental in optimizing data processing pipelines for hardware design analytics, working with large datasets of engineering design files, extracting relevant information, and transforming it into actionable insights.</li>
+        <li>Played a key role in supporting the integration of AI/ML capabilities, designing backend infrastructure to efficiently serve AI model predictions, such as identifying potential design errors or anomalies.</li>
+        <li>Actively contributed to developing new features that enhance collaboration among electrical engineering teams and with other departments, designing features for easy sharing of design data, managing feedback loops, and ensuring relevant information access.</li>
+        <li>Dedicated to continuous improvement of the platform's performance and scalability, identifying bottlenecks, implementing optimization strategies in code and database interactions, and ensuring systems handle growing user bases and data volumes.</li>
+        <li>Enhanced User Insights: Built a notification system using Vue.js for the frontend and Django with PostgreSQL, scheduling automated user updates via database triggers for real-time inventory insights. </li>
+        <li>Enhanced Decision Support System (DSS): Integrated Vue.js with Django REST APIs and PostgreSQL, utilizing custom queries for data analytics and dynamic team/player visualizations. </li>
+        <li>Led Distribution System Development: Architected a full-stack solution with Vue.js for the frontend and Django for backend logic, implementing the knapsack algorithm for order packing, Google Address API for validation, and MySQL for stock and batch management. </li>
+        <li>Developed Community App: Crafted a Flutter frontend connected to a Django backend via REST APIs, optimizing data flow for a seamless Australian community platform. </li>
+        <li>Optimized When We Performance: Slashed render time from 1 minute to 2 seconds by leveraging SvelteKit with server-side rendering, integrating a Django-powered chatbot, and tuning PostgreSQL queries. </li>
+        <li>Designed Scalable Databases: Collaborated on MySQL and PostgreSQL schema design with indexing, ensuring efficient data retrieval across systems. </li>
+    </ul>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" referrerpolicy="no-referrer"></script>
-<script>
-    var typed = new Typed('.typing', {
-    strings: ['', 'FullStack Developer,', 'Frontend Developer,', 'Backend Developer,', 'Mobile Apps Developer.'],
-    typeSpeed: 100,
-    BackSpeed: 60,
-    loop: true
-})
-</script>
+                <div class="bg-gray-800 dark:bg-gray-100 rounded-lg shadow-xl p-8 transition-transform transform hover:scale-[1.02] duration-300">
+                    <h3 class="text-3xl font-bold text-rose-500 mb-2">Associate Software Engineer Intern, Intelli Works - Lahore, Pakistan</h3>
+                    <p class="text-lg text-gray-300 dark:text-gray-700 mb-6">Oct 2024 - Nov 2024</p>
+                    <ul class="list-disc list-inside space-y-3 text-lg text-gray-300 dark:text-gray-700">
+                        <li>Developed IoT Solutions: Engineered IoT-based applications using C for backend services, integrating Serilog for structured logging to monitor system performance. </li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-800 dark:bg-gray-100 rounded-lg shadow-xl p-8 transition-transform transform hover:scale-[1.02] duration-300">
+                    <h3 class="text-3xl font-bold text-rose-500 mb-2">Software Engineer Intern, Netsol - Lahore, Pakistan</h3>
+                    <p class="text-lg text-gray-300 dark:text-gray-700 mb-6">Aug 2024 - Sep 2024</p>
+                    <ul class="list-disc list-inside space-y-3 text-lg text-gray-300 dark:text-gray-700">
+                        <li>Developed IoT Solutions: Engineered IoT-based applications using C for backend services, integrating Serilog for structured logging to monitor system performance. </li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-800 dark:bg-gray-100 rounded-lg shadow-xl p-8 transition-transform transform hover:scale-[1.02] duration-300">
+                    <h3 class="text-3xl font-bold text-rose-500 mb-2">Teaching Assistant, University of Engineering and Technology - Lahore, Pakistan</h3>
+                    <p class="text-lg text-gray-300 dark:text-gray-700 mb-6">Aug 2024 - Sep 2024</p>
+                    <ul class="list-disc list-inside space-y-3 text-lg text-gray-300 dark:text-gray-700">
+                        <li>Strengthened student proficiency in PF and OOP by designing hands-on Python/C++ exercises, delivering lectures, and assessing projects. </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 bg-gray-800 dark:bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-extrabold text-center text-white dark:text-gray-900 mb-12">
+                Projects
+            </h2>
+            <p class="text-lg text-gray-300 dark:text-gray-700 text-center max-w-2xl mx-auto mb-16">
+                Here you will find some of the personal and client projects that I created, each with its own case study.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="bg-gray-700 dark:bg-gray-100 rounded-lg shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
+                    <img src="./robopromo.jpg" alt="Robo Promo Screenshot" class="w-full h-56 object-cover" loading="lazy" />
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white dark:text-gray-900 mb-3">Robo Promo</h3>
+                        <p class="text-gray-300 dark:text-gray-700 mb-4 text-base">
+                            Participated in a project that is making a significant impact on the marketing and advertising industry. The project is a platform that allows users to create and manage their own promotional campaigns and advertising videos using AI technology. [cite: 28]
+                        </p>
+                        <a href="project-1.html"
+                            class="inline-flex items-center justify-center px-6 py-2 border border-transparent text-base font-medium rounded-md text-white bg-rose-600 hover:bg-rose-700 transition duration-300">
+                            Case Study
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-gray-700 dark:bg-gray-100 rounded-lg shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
+                    <img src="./whenwe.png" alt="When We App Screenshot" class="w-full h-56 object-cover" loading="lazy" />
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white dark:text-gray-900 mb-3">WhenWe App</h3>
+                        <p class="text-gray-300 dark:text-gray-700 mb-4 text-base">
+                            WhenWe is an online platform that invites people to contribute to a memory book about a person in yours, and their lives.  Optimized performance, slashing render time from 1 minute to 2 seconds by leveraging SvelteKit with server-side rendering. 
+                        </p>
+                        <a href="project-3.html"
+                            class="inline-flex items-center justify-center px-6 py-2 border border-transparent text-base font-medium rounded-md text-white bg-rose-600 hover:bg-rose-700 transition duration-300">
+                            Case Study
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-gray-700 dark:bg-gray-100 rounded-lg shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
+                    <img src="https://i.postimg.cc/BbFxfSm0/Ms.png" alt="Melbourne Storm Screenshot" class="w-full h-56 object-cover" loading="lazy" />
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white dark:text-gray-900 mb-3">Melbourne Storm</h3>
+                        <p class="text-gray-300 dark:text-gray-700 mb-4 text-base">
+                            I contributed to the creation of the decision review system for the Melbourne Storm, a rugby league club. [cite: 32] Developed comprehensive player selection and comparison systems, and implemented dynamic player visualization on a field using HTML Canvas.
+                        </p>
+                        <a href="project-2.html"
+                            class="inline-flex items-center justify-center px-6 py-2 border border-transparent text-base font-medium rounded-md text-white bg-rose-600 hover:bg-rose-700 transition duration-300">
+                            Case Study
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-gray-700 dark:bg-gray-100 rounded-lg shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
+                    <img src="./lirix.png" alt="Lirix Screenshot" class="w-full h-56 object-cover" loading="lazy" />
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white dark:text-gray-900 mb-3">Lirix (Distribution System)</h3>
+                        <p class="text-gray-300 dark:text-gray-700 mb-4 text-base">
+                            As Lead Developer, I spearheaded this project, architecting a full-stack solution with Vue.js and Django, implementing the knapsack algorithm for order packing, and integrating Google Address API for validation. 
+                        </p>
+                        <a href="project-4.html"
+                            class="inline-flex items-center justify-center px-6 py-2 border border-transparent text-base font-medium rounded-md text-white bg-rose-600 hover:bg-rose-700 transition duration-300">
+                            Case Study
+                        </a>
+                    </div>
+                </div>
+
+                <!-- <div class="bg-gray-700 dark:bg-gray-100 rounded-lg shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
+                    <img src="https://via.placeholder.com/400x250/2d3748/cbd5e0?text=UAMS+Placeholder" alt="UAMS Screenshot" class="w-full h-56 object-cover" loading="lazy" />
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white dark:text-gray-900 mb-3">UAMS (University Management System)</h3>
+                        <p class="text-gray-300 dark:text-gray-700 mb-4 text-base">
+                            Built a University Management System using ACID properties, transactions, and stored procedures for efficient attendance, grading, and assignments. [cite: 31] Tools Used: C#, Winform, MySQL. [cite: 32]
+                        </p>
+                        <span class="inline-flex items-center justify-center px-6 py-2 border border-gray-500 text-base font-medium rounded-md text-gray-400 cursor-not-allowed">
+                            Case Study (Coming Soon)
+                        </span>
+                    </div> -->
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-gray-900 dark:bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-extrabold text-white dark:text-gray-900 mb-12">
+                Get In Touch
+            </h2>
+            <p class="text-lg text-gray-300 dark:text-gray-700 max-w-2xl mx-auto mb-10">
+                Feel free to contact me by submitting the form below, and I will get back to you as soon as possible.
+            </p>
+            <div class="max-w-xl mx-auto bg-gray-800 dark:bg-gray-100 p-8 rounded-lg shadow-xl">
+                <form action="#" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-left text-lg font-medium text-gray-200 dark:text-gray-700 mb-2">Name</label>
+                        <input type="text" id="name" name="name" required
+                            class="w-full px-4 py-3 rounded-lg bg-gray-700 dark:bg-white border border-gray-600 dark:border-gray-300 text-white dark:text-gray-900 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent transition duration-300"
+                            placeholder="Enter Your Name" />
+                    </div>
+                    <div>
+                        <label for="email" class="block text-left text-lg font-medium text-gray-200 dark:text-gray-700 mb-2">Email</label>
+                        <input type="email" id="email" name="email" required
+                            class="w-full px-4 py-3 rounded-lg bg-gray-700 dark:bg-white border border-gray-600 dark:border-gray-300 text-white dark:text-gray-900 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent transition duration-300"
+                            placeholder="Enter Your Email" />
+                    </div>
+                    <div>
+                        <label for="message" class="block text-left text-lg font-medium text-gray-200 dark:text-gray-700 mb-2">Message</label>
+                        <textarea id="message" name="message" rows="6" required
+                            class="w-full px-4 py-3 rounded-lg bg-gray-700 dark:bg-white border border-gray-600 dark:border-gray-300 text-white dark:text-gray-900 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent transition duration-300"
+                            placeholder="Enter Your Message"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full px-6 py-3 bg-rose-600 text-white font-semibold rounded-lg shadow-lg hover:bg-rose-700 transition duration-300 transform hover:-translate-y-1">
+                        Submit
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 dark:bg-gray-100 py-10">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-white dark:text-gray-900 mb-4">Arham Mahmood Abbasi</h2>
+            <p class="text-gray-400 dark:text-gray-600 max-w-xl mx-auto mb-8">
+                A Senior Software Engineer constructing both the frontend and backend of websites and web applications, contributing to the overall success of the product.
+            </p>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="https://www.linkedin.com/in/arham-mahmood-abbasi/" target="_blank" rel="noreferrer"
+                    class="text-gray-400 hover:text-white dark:hover:text-gray-900 transition duration-300">
+                    <img class="w-8 h-8" src="https://d33wubrfki0l68.cloudfront.net/7f29579dde49e02480372aa49f7189c5536b0118/34b92/assets/png/linkedin-ico.png" alt="Linkedin" />
+                </a>
+                <a href="https://github.com/arham-mahmood-abbasi" target="_blank" rel="noreferrer"
+                    class="text-gray-400 hover:text-white dark:hover:text-gray-900 transition duration-300">
+                    <img class="w-8 h-8" src="https://d33wubrfki0l68.cloudfront.net/5557d5a11584d7201a38ee1a95200f57a4cc0f88/15085/assets/png/github-ico.png" alt="Github" />
+                </a>
+                <a href="https://twitter.com/arhamabbasi" target="_blank" rel="noreferrer"
+                    class="text-gray-400 hover:text-white dark:hover:text-gray-900 transition duration-300">
+                    <img class="w-8 h-8" src="https://d33wubrfki0l68.cloudfront.net/ef67339f7016cb09ba66366c1dc9145ac69f2a21/feca1/assets/png/twitter-ico.png" alt="Twitter" />
+                </a>
+                <a href="https://dev.to/arhamabbasi" target="_blank" rel="noreferrer"
+                    class="text-gray-400 hover:text-white dark:hover:text-gray-900 transition duration-300">
+                    <img class="w-8 h-8" src="https://d33wubrfki0l68.cloudfront.net/c7b1e51b8c75a239d68af3d42866666580f390ec/dcc7c/assets/png/blog-ico.png" alt="DEV.to Blog" />
+                </a>
+                <a href="https://www.youtube.com/@codingwitharham2051" target="_blank" rel="noreferrer"
+                    class="text-gray-400 hover:text-white dark:hover:text-gray-900 transition duration-300">
+                    <img class="w-8 h-8" src="https://d33wubrfki0l68.cloudfront.net/493f1aa6da674c05bc606ba5b9e8092b881e8626/67c76/assets/png/yt-ico.png" alt="Youtube" />
+                </a>
+            </div>
+            <p class="text-gray-500 text-sm">
+                © Copyright <script>document.write(new Date().getFullYear())</script>. Made by
+                <a rel="noreferrer" target="_blank" href="https://arham-mahmood-abbasi.github.io/protfolio"
+                    class="text-rose-500 hover:underline">Arham Mahmood Abbasi</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" referrerpolicy="no-referrer"></script>
+    <script>
+        var typed = new Typed('.typing', {
+            strings: [
+                'Full-Stack Developer,',
+                'Backend Systems Architect,',
+                'AI Integration Specialist,',
+                'Performance Optimization Lead,'
+            ],
+            typeSpeed: 70,
+            backSpeed: 40,
+            loop: true,
+            startDelay: 500,
+            backDelay: 1500,
+            showCursor: true,
+            cursorChar: '|',
+        });
+
+        // Mobile menu toggle functionality
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+        const header = document.querySelector('header');
+
+        menuToggle.addEventListener('change', function() {
+            if (this.checked) {
+                menu.classList.remove('hidden');
+                menu.classList.add('flex', 'flex-col', 'items-center', 'w-full', 'md:hidden');
+                header.classList.add('pb-4'); // Add padding when menu is open
+            } else {
+                menu.classList.add('hidden');
+                menu.classList.remove('flex', 'flex-col', 'items-center', 'w-full', 'md:hidden');
+                header.classList.remove('pb-4'); // Remove padding when menu is closed
+            }
+        });
+    </script>
+</body>
+
+</html>
